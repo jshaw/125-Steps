@@ -10,7 +10,7 @@ import toxi.math.*;
 import toxi.color.*;
 import krister.Ess.*;
 
-
+import java.util.*;
 
 import megamu.mesh.*;
 
@@ -641,10 +641,10 @@ void GiveDescription(){
 }
 
 void setup(){
-   size(2400, 600, OPENGL);
+   size(2420, 600, OPENGL);
   // set location - needs to be in setup()
   // set x parameter depending on the resolution of your 1st screen
-  frame.setLocation(1680,0);
+  frame.setLocation(1660,50);
 
    oscP5 = new OscP5(this,12005);
    myRemoteLocation = new NetAddress("127.0.0.1",12005);
