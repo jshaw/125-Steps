@@ -16,11 +16,12 @@ void main() {
 	//vec3 a = concentric(screen/2.0, 1.0);
 	float r = time/1000.0;
 	float theta = time/2000.0;
-	vec2 off = vec2(sin(theta), 0.9*cos(theta)) * r;
-	vec2 pt = screen/2.0 + off;
+	float scale = mouse.y * 10.0 / screen.y;
 
-	vec3 a = concentric(screen-pt, 1.0);
-	vec3 b = concentric(pt, 1.0);
+	vec2 off = vec2(sin(theta), 0.9*cos(theta)) * r * scale;
+	vec2 pt = screen/2.0 + off;
+	vec3 a = concentric(screen-pt, scale);
+	vec3 b = concentric(pt, scale);
 
 	gl_FragColor = vec4(a*b, 1.0);
 }

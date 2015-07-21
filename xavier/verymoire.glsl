@@ -14,8 +14,9 @@ vec3 concentric(vec2 center, float scale) {
 void main() {
 	//gl_FragColor = vec4(mouse.x / screen.x, mouse.y / screen.y, mod(time/1000.0, 1.0), 1.0);
 	//vec3 a = concentric(screen/2.0, 1.0);
-	vec3 a = concentric(screen-mouse, 0.2);
-	vec3 b = concentric(mouse, 0.2);
+	float scale = mouse.y * 1.0 / screen.y;
+	vec3 a = concentric(screen-mouse, scale);
+	vec3 b = concentric(mouse, scale);
 
 	gl_FragColor = vec4(a*b, 1.0);
 }
