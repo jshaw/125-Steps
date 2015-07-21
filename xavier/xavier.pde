@@ -8,7 +8,7 @@ void setup() {
     // set location - needs to be in setup()
  //size(2420, 600, OPENGL);
  size(displayWidth, displayHeight, OPENGL);
- shaders = new String[]{"twistydots.glsl", "moire.glsl",
+ shaders = new String[]{"complex.glsl", "twistydots.glsl", "moire.glsl",
          "colormoire.glsl",
          "verymoire.glsl",
          "dots.glsl"};
