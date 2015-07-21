@@ -7,7 +7,7 @@ vec3 concentric(vec2 center, float scale) {
 	vec2 delta = screenCoord - center;
 	float r = length(delta);
 	//float theta = atan2(delta.y, delta.x);
-	float s = 0.5 * (sin(r/scale) + 1.0);
+	float s = 0.5 * pow(sin(r/scale) + 1.0, 3.0);
 	return vec3(s, s, s);
 }
 
