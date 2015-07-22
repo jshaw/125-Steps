@@ -1,6 +1,8 @@
 uniform float time;
 uniform vec2 mouse;
 uniform vec2 screen;
+uniform float fader1;
+uniform vec2 norm;
 
 vec3 concentric(vec2 center, float scale) {
 	vec2 screenCoord = gl_FragCoord.xy;
@@ -16,12 +18,14 @@ void main() {
 	//vec3 a = concentric(screen/2.0, 1.0);
 	float r = time/1000.0;
 	float theta = time/2000.0;
-	float scale = mouse.y * 10.0 / screen.y;
+	float scale = fader1/255.0 * 10.0;
+	//float scale = 2.0;
 
 	vec2 off = vec2(sin(theta), 0.9*cos(theta)) * r * scale;
-	vec2 pt = screen/2.0 + off;
-	vec3 a = concentric(screen-pt, scale);
-	vec3 b = concentric(pt, scale);
+	vec2 center = norm*screen;
+	//vec2 pt = center + off;
+	vec3 a = concentric(center + off, scale);
+	vec3 b = concentric(center - off, scale);
 
 	gl_FragColor = vec4(a*b, 1.0);
 }

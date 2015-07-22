@@ -49,12 +49,12 @@ SyphonServer server;
 
 
 
-char Mode='a';
+char Mode='x';
 char TempMode;// = Mode;
 
 
 int oscX,oscY,fader1=10,fader2=10,fader3=10,fader4=10,fader5=10,fader6=10;
-
+float normX, normY;
 
 
 
@@ -152,7 +152,10 @@ void oscEvent(OscMessage theOscMessage) {
     if (addr.indexOf("/1/xy") !=-1) { // the 8 X Y area
     oscY =  (int)((1-(theOscMessage.get(0).floatValue())) * 800);
     oscX =  (int)(theOscMessage.get(1).floatValue() * 1200);
+    normY = theOscMessage.get(0).floatValue();
+    normX = theOscMessage.get(1).floatValue();
     println("XY received");
+    println("NormX, normY" + normX + " " + normY);
   }
   
   //println(theOscMessage.addrPattern());
@@ -258,7 +261,8 @@ void second_setup() {
     break;  
 
   case 'd':
-     d_setup();
+     //d_setup();
+     dg_setup();
     break;  
 
   case 'f':
@@ -284,7 +288,8 @@ void second_setup() {
     break;
     
     case 'c':
-    TreePattern3_setup();
+    //TreePattern3_setup();
+    cb_setup();
     break;
     
     case 'v':
@@ -413,7 +418,8 @@ void draw() {
 
 
   case 'd':
-     d_draw();
+     //d_draw();
+     dg_draw();
     break;  
 
   case 'f':
@@ -438,7 +444,8 @@ void draw() {
     break;
     
     case 'c':
-    TreePattern3_draw();
+    //TreePattern3_draw();
+    cb_draw();
     break;
 
 
@@ -479,7 +486,7 @@ void draw() {
   }
   
    
-    
+  
   if(BlackFader > 0) {
      colorMode(RGB, 100);
      strokeWeight(1);
@@ -599,7 +606,7 @@ void GiveDescription(){
     
     
     case 'd': 
-      println("d: Expanding then Conracting circle outlines");
+      println("d: (diag) Expanding then Conracting circle outlines");
     break;
     
     case 'e': 
@@ -624,7 +631,8 @@ void GiveDescription(){
     
     
      case 'c': 
-      println("c: Tree Pattern 3, Strobe");
+      //println("c: Tree Pattern 3, Strobe");
+      println("c: Cubes");
     break;
     
     case 'v': 

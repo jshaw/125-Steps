@@ -1,9 +1,11 @@
 uniform float time;
 uniform vec2 mouse;
 uniform vec2 screen;
+uniform vec2 norm;
+uniform float fader3;
 
 void main() {
-	vec2 z = gl_FragCoord.xy - screen*0.5;
+	vec2 z = gl_FragCoord.xy - screen*norm;
 	z /= 100.0;
 
 	float r = length(z);
@@ -12,7 +14,7 @@ void main() {
 	t += time/10000.0;
 
 	//float change = (mouse.x - screen.x/2.0)*0.01;
-	float change = time*0.001;
+	float change = fader3*time*0.00001;
 	//r += change;
 
 	float rinv = 1.0/r;
