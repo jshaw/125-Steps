@@ -61,8 +61,29 @@ int oscX,oscY,fader1=10,fader2=10,fader3=10,fader4=10,fader5=10,fader6=10;
 void oscEvent(OscMessage theOscMessage) {
   
   String addr = theOscMessage.addrPattern();
+
+
   
   /* print the address pattern and the typetag of the received OscMessage */
+
+  if(theOscMessage.checkAddrPattern("/2/chooser/10/1")==true) {
+      changeScene('a');
+    OscMessage myMessage = new OscMessage("/2/scene");
+    myMessage.add("Scene A"); /* add description */
+    oscP5.send(myMessage, myRemoteLocation); 
+ 
+
+
+      
+  }
+  if(theOscMessage.checkAddrPattern("/2/chooser/10/2")==true) {
+      changeScene('b');
+    OscMessage myMessage = new OscMessage("/2/scene");
+    myMessage.add("Scene B"); /* add description */
+    oscP5.send(myMessage, myRemoteLocation); 
+ 
+  }
+
   
   if(theOscMessage.checkAddrPattern("/fader1")==true) {
      fader1 = (int)theOscMessage.get(0).floatValue();
@@ -152,12 +173,12 @@ void oscEvent(OscMessage theOscMessage) {
     if (addr.indexOf("/1/xy") !=-1) { // the 8 X Y area
     oscY =  (int)((1-(theOscMessage.get(0).floatValue())) * 800);
     oscX =  (int)(theOscMessage.get(1).floatValue() * 1200);
-    println("XY received");
+  //  println("XY received");
   }
   
   //println(theOscMessage.addrPattern());
   //println(fader1 + " " + fader2 + " " + fader3 + " " + fader4 + " " + fader5 + " " + fader6);
-  //println(oscX + " " + oscY);
+  println(oscX + " " + oscY);
   
 }
 
@@ -279,7 +300,8 @@ void second_setup() {
     
     
       case 'x':
-    TreePattern2_setup();
+    //TreePattern2_setup();
+    xs_setup();
     break;
     
     case 'c':
@@ -432,7 +454,8 @@ void draw() {
     break;
     
     case 'x':
-    TreePattern2_draw();
+    //TreePattern2_draw();
+    xs_draw();
     break;
     
     case 'c':
@@ -685,7 +708,8 @@ void setup(){
   //frame.setLocation(1660,50);
 
    oscP5 = new OscP5(this,12005);
-   myRemoteLocation = new NetAddress("127.0.0.1",12005);
+   myRemoteLocation = new NetAddress("192.168.0.48",12006);
+   
 
   //Syphon
   syphon = new Syphon(this, "Understory App"); 
