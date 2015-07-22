@@ -6,22 +6,27 @@
 int BlackFader = -100;
 
 void keyPressed() {
-    TempMode = key;
+    tempScene = sceneMap.get(Character.toString(key));
+    if (tempScene == null) {
+      println("No scene found for that character: " + key);
+      return;
+    }
+    
     OscMessage myMessage = new OscMessage("/2/scene");
     myMessage.add("Scene A"); /* add description */
     oscP5.send(myMessage, myRemoteLocation); 
-    GiveDescription();
+    //GiveDescription()
     BlackFader = 100;
 }
 
-interface Module {
+interface Scene {
   void setup();
   void draw();
 }
-void changeScene(char input) {
-    TempMode = input;
-    GiveDescription();
+
+void changeScene(Scene s) {
+    tempScene = s;
+    //println(s.getDescription());
     BlackFader = 100;
- 
 }
 

@@ -8,11 +8,6 @@ void a_setup() {
 
   
 }
-
-
-
-
-
   
   
 void a_draw() {
@@ -1834,4 +1829,78 @@ void y_draw() {
   world.draw();
   //println(world.getBodies());
 }
+
+Scene AScene = new Scene() {
+    void setup() { a_setup(); }
+    void draw() { a_draw(); }
+};
+Scene DScene = new Scene() {
+    void setup() { d_setup(); }
+    void draw() { d_draw(); }
+};
+Scene EScene = new Scene() {
+    void setup() { e_setup(); }
+    void draw() { e_draw(); }
+};
+Scene FScene = new Scene() {
+    void setup() { f_setup(); }
+    void draw() { f_draw(); }
+};
+Scene GScene = new Scene() {
+    void setup() { g_setup(); }
+    void draw() { g_draw(); }
+};
+Scene HScene = new Scene() {
+    void setup() { h_setup(); }
+    void draw() { h_draw(); }
+};
+Scene IScene = new Scene() {
+    void setup() { i_setup(); }
+    void draw() { i_draw(); }
+};
+Scene JScene = new Scene() {
+    void setup() { j_setup(); }
+    void draw() { j_draw(); }
+};
+Scene KScene = new Scene() {
+    void setup() { k_setup(); }
+    void draw() { k_draw(); }
+};
+Scene LScene = new Scene() {
+    void setup() { l_setup(); }
+    void draw() { l_draw(); }
+};
+Scene OScene = new Scene() {
+    void setup() { o_setup(); }
+    void draw() { o_draw(); }
+};
+Scene PScene = new Scene() {
+    void setup() { p_setup(); }
+    void draw() { p_draw(); }
+};
+Scene QScene = new Scene() {
+    void setup() { q_setup(); }
+    void draw() { q_draw(); }
+};
+Scene RScene = new Scene() {
+    void setup() { r_setup(); }
+    void draw() { r_draw(); }
+};
+Scene TScene = new Scene() {
+    void setup() { t_setup(); }
+    void draw() { t_draw(); }
+};
+Scene UScene = new Scene() {
+    void setup() { u_setup(); }
+    void draw() { u_draw(); }
+};
+Scene WScene = new Scene() {
+    void setup() { w_setup(); }
+    void draw() { w_draw(); }
+};
+Scene YScene = new Scene() {
+    void setup() { y_setup(); }
+    void draw() { y_draw(); }
+};
+
 
