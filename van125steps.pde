@@ -644,7 +644,7 @@ void setup(){
    size(2420, 600, OPENGL);
   // set location - needs to be in setup()
   // set x parameter depending on the resolution of your 1st screen
-  frame.setLocation(1660,50);
+  //frame.setLocation(1660,50);
 
    oscP5 = new OscP5(this,12005);
    myRemoteLocation = new NetAddress("127.0.0.1",12005);
@@ -721,8 +721,8 @@ void contactStarted(FContact contact) {
 }
 
 public void init() {
-  frame.removeNotify();
-  frame.setUndecorated(true); // works.
+  //frame.removeNotify();
+  //frame.setUndecorated(true); // works.
   
   // call PApplet.init() to take care of business
   super.init();
