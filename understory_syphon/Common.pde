@@ -1,11 +1,5 @@
 
-
-
-  
-  
 int BlackFader = -100;
-
-
 
 void keyPressed() {
     TempMode = key;
@@ -14,4 +8,7 @@ void keyPressed() {
  
 }
 
-
+interface Module {
+  void setup();
+  void draw();
+}

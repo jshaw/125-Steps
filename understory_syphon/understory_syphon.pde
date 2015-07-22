@@ -49,7 +49,7 @@ SyphonServer server;
 
 
 
-char Mode='x';
+char Mode='c';
 char TempMode;// = Mode;
 
 
@@ -262,7 +262,7 @@ void second_setup() {
 
   case 'd':
      //d_setup();
-     dg_setup();
+     diags.setup();
     break;  
 
   case 'f':
@@ -284,12 +284,12 @@ void second_setup() {
     
       case 'x':
     //TreePattern2_setup();
-    xs_setup();
+    shader.setup();
     break;
     
     case 'c':
     //TreePattern3_setup();
-    cb_setup();
+    cubes.setup();
     break;
     
     case 'v':
@@ -419,7 +419,7 @@ void draw() {
 
   case 'd':
      //d_draw();
-     dg_draw();
+     diags.draw();
     break;  
 
   case 'f':
@@ -440,12 +440,12 @@ void draw() {
     
     case 'x':
     //TreePattern2_draw();
-    xs_draw();
+    shader.draw();
     break;
     
     case 'c':
     //TreePattern3_draw();
-    cb_draw();
+    cubes.draw();
     break;
 
 
