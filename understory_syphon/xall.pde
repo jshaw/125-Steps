@@ -1,3 +1,5 @@
+/** SHADERS **/
+
 PShader myShader;
 
 String[] shaders;
@@ -37,6 +39,8 @@ void xs_draw() {
   shader(myShader, TRIANGLES);
   rect(0, 0, width, height);
 }
+
+/** ISO CUBES **/
 
 float[][] cubeD;
 float[][] cubeV;
@@ -160,6 +164,9 @@ void cb_draw() {
   cubeD[whichY][whichX] = fader3 * sin(tSin/1000.0);
   drawCubes();
 }
+
+/** DIAGS **/
+
 float p[][];
 float v[][];
 int target = 0;
