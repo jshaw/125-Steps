@@ -69,7 +69,7 @@ class intComparator implements Comparator {
   }
 }
 
-Scene lineMaker = new Scene() {
+Scene lineMaker = new Scene("Line Maker") {
   void setup() { LineMaker_setup(); }
   void draw() { LineMaker_draw(); }
 };

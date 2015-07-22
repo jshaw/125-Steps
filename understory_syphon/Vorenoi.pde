@@ -112,7 +112,7 @@ void Vorenoi_draw() {
   //println(world.getBodies());
 }
 
-Scene vorenoi = new Scene() { // [sic], it's Voronoi.
+Scene vorenoi = new Scene("Voronoi") { // [sic], it's Voronoi.
   void setup() {Vorenoi_setup();}
   void draw() {Vorenoi_draw();}
 };

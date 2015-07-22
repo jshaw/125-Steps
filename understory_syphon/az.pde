@@ -493,11 +493,6 @@ void h_draw() {
 
 
 void i_setup() {
-  
-      
-      
-      
-
 
   Fisica.init(this);
 
@@ -523,15 +518,6 @@ void i_setup() {
     b.setVelocity(random(-100,100),random(-100,100));
     world.add(b);
   }
-  
-
-  //remover = new FBox(2048, 20);
-  //remover.setPosition(1024, height+40);
-  //remover.setStatic(true);
-  //remover.setFill(0);
-  //remover.setRestitution(0);
-  //world.add(remover);
-  
   
 
 }
@@ -1830,75 +1816,75 @@ void y_draw() {
   //println(world.getBodies());
 }
 
-Scene AScene = new Scene() {
+Scene AScene = new Scene("a: static grid") {
     void setup() { a_setup(); }
     void draw() { a_draw(); }
 };
-Scene DScene = new Scene() {
+Scene DScene = new Scene("d: Expanding then contracting circle outlines") {
     void setup() { d_setup(); }
     void draw() { d_draw(); }
 };
-Scene EScene = new Scene() {
+Scene EScene = new Scene("e: Fountain of pink balls") {
     void setup() { e_setup(); }
     void draw() { e_draw(); }
 };
-Scene FScene = new Scene() {
+Scene FScene = new Scene("f: Scrolling grayscale stripes") {
     void setup() { f_setup(); }
     void draw() { f_draw(); }
 };
-Scene GScene = new Scene() {
+Scene GScene = new Scene("g: expanding circle outlines") {
     void setup() { g_setup(); }
     void draw() { g_draw(); }
 };
-Scene HScene = new Scene() {
+Scene HScene = new Scene("h: Flying Rectangles") {
     void setup() { h_setup(); }
     void draw() { h_draw(); }
 };
-Scene IScene = new Scene() {
+Scene IScene = new Scene("i: Voronoi outlines") {
     void setup() { i_setup(); }
     void draw() { i_draw(); }
 };
-Scene JScene = new Scene() {
+Scene JScene = new Scene("j: inside a 3d rotating point mesh") {
     void setup() { j_setup(); }
     void draw() { j_draw(); }
 };
-Scene KScene = new Scene() {
+Scene KScene = new Scene("k: point board") {
     void setup() { k_setup(); }
     void draw() { k_draw(); }
 };
-Scene LScene = new Scene() {
+Scene LScene = new Scene("l: Hollow Spinning Recctangles CHECK") {
     void setup() { l_setup(); }
     void draw() { l_draw(); }
 };
-Scene OScene = new Scene() {
+Scene OScene = new Scene("o: Rotating grid") {
     void setup() { o_setup(); }
     void draw() { o_draw(); }
 };
-Scene PScene = new Scene() {
+Scene PScene = new Scene("p: Rotating mesh sphere") {
     void setup() { p_setup(); }
     void draw() { p_draw(); }
 };
-Scene QScene = new Scene() {
+Scene QScene = new Scene("q: Screen filling green balls at x,y") {
     void setup() { q_setup(); }
     void draw() { q_draw(); }
 };
-Scene RScene = new Scene() {
+Scene RScene = new Scene("r: Comets") {
     void setup() { r_setup(); }
     void draw() { r_draw(); }
 };
-Scene TScene = new Scene() {
+Scene TScene = new Scene("t: rain") {
     void setup() { t_setup(); }
     void draw() { t_draw(); }
 };
-Scene UScene = new Scene() {
+Scene UScene = new Scene("u: Fireflies") {
     void setup() { u_setup(); }
     void draw() { u_draw(); }
 };
-Scene WScene = new Scene() {
+Scene WScene = new Scene("w: balls fly from left to right") {
     void setup() { w_setup(); }
     void draw() { w_draw(); }
 };
-Scene YScene = new Scene() {
+Scene YScene = new Scene("y: vines") {
     void setup() { y_setup(); }
     void draw() { y_draw(); }
 };

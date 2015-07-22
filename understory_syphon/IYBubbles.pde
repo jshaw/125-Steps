@@ -61,7 +61,7 @@ void Bubbles_draw() {
   //println(world.getBodies());
 }
 
-Scene bubbles = new Scene() {
+Scene bubbles = new Scene("Bubbles") {
   void setup() {
     Bubbles_setup();
   }

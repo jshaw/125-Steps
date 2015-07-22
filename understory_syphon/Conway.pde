@@ -161,7 +161,7 @@ void conway_draw() {
   ConwayGrid[(int)random(Conway_width)][(int)random(Conway_height)] = true;
 }
 
-Scene conway = new Scene() {
+Scene conway = new Scene("9: Conway's game o life") {
   void setup() {
     conway_setup();
   }

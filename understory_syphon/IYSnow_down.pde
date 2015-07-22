@@ -55,7 +55,7 @@ void snow_down_draw() {
   //println(world.getBodies());
 }
 
-Scene snowDown = new Scene() {
+Scene snowDown = new Scene("Snow down") {
   void setup() {
     snow_down_setup();
   }

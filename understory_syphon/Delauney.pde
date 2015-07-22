@@ -148,7 +148,7 @@ void Delauney_draw() {
   //println(world.getBodies());
 }
 
-Scene delauney = new Scene() {
+Scene delauney = new Scene("Delaunay") {
   void setup() {
     Delauney_setup();
   }

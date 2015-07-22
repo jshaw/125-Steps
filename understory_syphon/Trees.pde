@@ -247,7 +247,7 @@ void TreePattern8_draw() {
   }
 }
 
-Scene treePattern1 = new Scene() {
+Scene treePattern1 = new Scene("Trees Pattern 1") {
   void setup() {
     TreePattern1_setup();
   }
@@ -255,7 +255,7 @@ Scene treePattern1 = new Scene() {
     TreePattern1_draw();
   }
 };
-Scene treePattern2 = new Scene() {
+Scene treePattern2 = new Scene("Tree Pattern 2") {
   void setup() {
     TreePattern2_setup();
   }
@@ -263,7 +263,7 @@ Scene treePattern2 = new Scene() {
     TreePattern2_draw();
   }
 };
-Scene treePattern3 = new Scene() {
+Scene treePattern3 = new Scene("Tree Pattern 3") {
   void setup() {
     TreePattern3_setup();
   }
@@ -271,7 +271,7 @@ Scene treePattern3 = new Scene() {
     TreePattern3_draw();
   }
 };
-Scene treePattern4 = new Scene() {
+Scene treePattern4 = new Scene("Tree Pattern 4") {
   void setup() {
     TreePattern4_setup();
   }
@@ -279,7 +279,7 @@ Scene treePattern4 = new Scene() {
     TreePattern4_draw();
   }
 };
-Scene treePattern5 = new Scene() {
+Scene treePattern5 = new Scene("Tree Pattern 5") {
   void setup() {
     TreePattern5_setup();
   }
@@ -287,7 +287,7 @@ Scene treePattern5 = new Scene() {
     TreePattern5_draw();
   }
 };
-Scene treePattern6 = new Scene() {
+Scene treePattern6 = new Scene("Tree Pattern 6") {
   void setup() {
     TreePattern6_setup();
   }
@@ -295,7 +295,7 @@ Scene treePattern6 = new Scene() {
     TreePattern6_draw();
   }
 };
-Scene treePattern7 = new Scene() {
+Scene treePattern7 = new Scene("Tree Pattern 7") {
   void setup() {
     TreePattern7_setup();
   }
@@ -303,7 +303,7 @@ Scene treePattern7 = new Scene() {
     TreePattern7_draw();
   }
 };
-Scene treePattern8 = new Scene() {
+Scene treePattern8 = new Scene("Tree Pattern 8") {
   void setup() {
     TreePattern8_setup();
   }

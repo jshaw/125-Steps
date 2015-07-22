@@ -65,7 +65,7 @@ float normX, normY;
 void oscEvent(OscMessage theOscMessage) {
   
   String addr = theOscMessage.addrPattern();
-  
+  println(addr);
   /* print the address pattern and the typetag of the received OscMessage */
 
   if(theOscMessage.checkAddrPattern("/2/chooser/10/1")==true) {

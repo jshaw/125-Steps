@@ -15,13 +15,20 @@ void keyPressed() {
     OscMessage myMessage = new OscMessage("/2/scene");
     myMessage.add("Scene A"); /* add description */
     oscP5.send(myMessage, myRemoteLocation); 
-    //GiveDescription()
+    println(tempScene.description);
     BlackFader = 100;
 }
 
-interface Scene {
-  void setup();
-  void draw();
+abstract class Scene {
+  String description;
+  Scene(String description) {
+    this.description = description;
+  }
+  Scene() {
+    this.description = "No description specified";
+  }
+  abstract void setup();
+  abstract void draw();
 }
 
 void changeScene(Scene s) {
