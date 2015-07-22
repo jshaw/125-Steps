@@ -2,7 +2,7 @@
 
 
 
-Scene shader = new Scene() {
+Scene shader = new Scene("Shaders scene: ") {
   PShader myShader;
   String[] shaders;
   int shaderI = 0;
@@ -43,7 +43,7 @@ Scene shader = new Scene() {
 
 /** ISO CUBES **/
 
-Scene cubes = new Scene() {
+Scene cubes = new Scene("Cubes scene") {
   float[][] cubeD;
   float[][] cubeV;
   
@@ -169,7 +169,7 @@ Scene cubes = new Scene() {
 };
 
 /** DIAGS **/
-Scene diags  = new Scene() {
+Scene diags  = new Scene("Diags scene") {
   float p[][];
   float v[][];
   int target = 0;
