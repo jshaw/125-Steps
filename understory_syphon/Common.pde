@@ -5,7 +5,6 @@ void keyPressed() {
     TempMode = key;
     GiveDescription();
     BlackFader = 100;
- 
 }
 
 interface Module {
