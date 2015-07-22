@@ -279,7 +279,8 @@ void second_setup() {
     
     
       case 'x':
-    TreePattern2_setup();
+    //TreePattern2_setup();
+    xs_setup();
     break;
     
     case 'c':
@@ -432,7 +433,8 @@ void draw() {
     break;
     
     case 'x':
-    TreePattern2_draw();
+    //TreePattern2_draw();
+    xs_draw();
     break;
     
     case 'c':
